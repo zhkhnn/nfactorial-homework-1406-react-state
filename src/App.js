@@ -55,16 +55,13 @@ function App() {
 
   },[items,toggleItems])
 
-
-
-
-
   const handleToDoChange = (event) => {
     setItemToDo(event.target.value);
   };
   const removeItem = ({key})=> {
     const removeArr = [...items].filter(item=>item.key !==key);
     setItems(removeArr);
+    
   }
   const handleToSearch = (event) => {
     const find = event.target.value.toLowerCase();
