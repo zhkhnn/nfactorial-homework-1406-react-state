@@ -42,7 +42,7 @@ function App() {
 
 
   useEffect(()=>{
-    const  itemsTemp = JSON.parse(localStorage.getItem("item"))
+    const  itemsTemp = JSON.parse(localStorage.getItem("item"))?JSON.parse(localStorage.getItem("item")):[]
     setItems([...itemsTemp])
   },[])
 
